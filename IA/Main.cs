@@ -26,6 +26,27 @@ namespace IA
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             txtRutaGrafo.Text = openFileGrafo.FileName;
+            analizarFicheroGrafo();
+        }
+
+        private void analizarFicheroGrafo()
+        {
+            string[] filelines2 = File.ReadAllLines(openFileGrafo.FileName);
+
+            for (int i = 0; i < filelines2.Length; i++) {
+                string[] data = filelines2[i].Split(';');
+                string nombre = data[0];
+                if (nombre.Equals("Shakhriston")) continue;
+                Estacion estacion = estaciones[nombre];
+                string[] vecinos = data[1].Trim('[').Trim(']').Split(',');
+                for (int j = 0; j < vecinos.Length; j++) {
+                    Estacion estacionVecina = estaciones[vecinos[j]];
+                    estacion.conectar(estacionVecina);
+                    estacionVecina.conectar(estacion);
+                }
+            }
+
+            Console.WriteLine("Todo correcto");
         }
 
         private void btnAbrirGrafo_Click(object sender, EventArgs e)
@@ -81,12 +102,14 @@ namespace IA
         double lat;
         double lng;
         Dictionary<String, double> distances;
+        Dictionary<String, Estacion> adyacentes;
 
         public Estacion(string name, double lat, double lng) {
             this.name = name;
             this.lat = lat;
             this.lng = lng;
             this.distances = new Dictionary<string, double>();
+            this.adyacentes = new Dictionary<string, Estacion>();
         }
 
         public void putDist(string to, double dist) {
@@ -95,6 +118,14 @@ namespace IA
 
         public double getDist(string to) {
             return this.distances[to];
+        }
+
+        public string getName() {
+            return this.name;
+        }
+
+        public void conectar(Estacion vecino) {
+            adyacentes[vecino.getName()] = vecino;
         }
     }
 }

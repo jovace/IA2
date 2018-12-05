@@ -37,9 +37,10 @@
             this.btnAbrirGrafo = new System.Windows.Forms.Button();
             this.lblGrafo = new System.Windows.Forms.Label();
             this.tabSimple = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.openFileGrafo = new System.Windows.Forms.OpenFileDialog();
             this.openFileDistancias = new System.Windows.Forms.OpenFileDialog();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.mainTabControl.SuspendLayout();
             this.tabConfiguracion.SuspendLayout();
             this.tabSimple.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // tabConfiguracion
             // 
+            this.tabConfiguracion.Controls.Add(this.panel2);
             this.tabConfiguracion.Controls.Add(this.txtRutaDistancias);
             this.tabConfiguracion.Controls.Add(this.btnAbrirDistancias);
             this.tabConfiguracion.Controls.Add(this.lblDistancias);
@@ -73,14 +75,14 @@
             // 
             // txtRutaDistancias
             // 
-            this.txtRutaDistancias.Location = new System.Drawing.Point(134, 53);
+            this.txtRutaDistancias.Location = new System.Drawing.Point(134, 22);
             this.txtRutaDistancias.Name = "txtRutaDistancias";
             this.txtRutaDistancias.Size = new System.Drawing.Size(167, 20);
             this.txtRutaDistancias.TabIndex = 5;
             // 
             // btnAbrirDistancias
             // 
-            this.btnAbrirDistancias.Location = new System.Drawing.Point(304, 51);
+            this.btnAbrirDistancias.Location = new System.Drawing.Point(304, 20);
             this.btnAbrirDistancias.Name = "btnAbrirDistancias";
             this.btnAbrirDistancias.Size = new System.Drawing.Size(78, 23);
             this.btnAbrirDistancias.TabIndex = 4;
@@ -91,7 +93,7 @@
             // lblDistancias
             // 
             this.lblDistancias.AutoSize = true;
-            this.lblDistancias.Location = new System.Drawing.Point(6, 56);
+            this.lblDistancias.Location = new System.Drawing.Point(6, 25);
             this.lblDistancias.Name = "lblDistancias";
             this.lblDistancias.Size = new System.Drawing.Size(108, 13);
             this.lblDistancias.TabIndex = 3;
@@ -99,14 +101,14 @@
             // 
             // txtRutaGrafo
             // 
-            this.txtRutaGrafo.Location = new System.Drawing.Point(134, 22);
+            this.txtRutaGrafo.Location = new System.Drawing.Point(134, 48);
             this.txtRutaGrafo.Name = "txtRutaGrafo";
             this.txtRutaGrafo.Size = new System.Drawing.Size(167, 20);
             this.txtRutaGrafo.TabIndex = 2;
             // 
             // btnAbrirGrafo
             // 
-            this.btnAbrirGrafo.Location = new System.Drawing.Point(304, 20);
+            this.btnAbrirGrafo.Location = new System.Drawing.Point(304, 46);
             this.btnAbrirGrafo.Name = "btnAbrirGrafo";
             this.btnAbrirGrafo.Size = new System.Drawing.Size(78, 23);
             this.btnAbrirGrafo.TabIndex = 1;
@@ -117,7 +119,7 @@
             // lblGrafo
             // 
             this.lblGrafo.AutoSize = true;
-            this.lblGrafo.Location = new System.Drawing.Point(6, 25);
+            this.lblGrafo.Location = new System.Drawing.Point(6, 51);
             this.lblGrafo.Name = "lblGrafo";
             this.lblGrafo.Size = new System.Drawing.Size(85, 13);
             this.lblGrafo.TabIndex = 0;
@@ -134,6 +136,13 @@
             this.tabSimple.Text = "Vista simple";
             this.tabSimple.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(7, 35);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(887, 527);
+            this.panel1.TabIndex = 0;
+            // 
             // openFileGrafo
             // 
             this.openFileGrafo.FileName = "openFileDialog1";
@@ -146,12 +155,12 @@
             this.openFileDistancias.InitialDirectory = "./";
             this.openFileDistancias.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDistancias_FileOk);
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Location = new System.Drawing.Point(7, 35);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(887, 527);
-            this.panel1.TabIndex = 0;
+            this.panel2.Location = new System.Drawing.Point(9, 74);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(885, 488);
+            this.panel2.TabIndex = 6;
             // 
             // Main
             // 
@@ -183,6 +192,7 @@
         private System.Windows.Forms.Label lblDistancias;
         private System.Windows.Forms.OpenFileDialog openFileDistancias;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
