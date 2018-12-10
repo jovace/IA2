@@ -48,17 +48,29 @@
             this.cbEstacionFinal = new System.Windows.Forms.ComboBox();
             this.cbEstacionInicio = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tabDetallado = new System.Windows.Forms.TabPage();
+            this.picMapaDetallado = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.openFileGrafo = new System.Windows.Forms.OpenFileDialog();
             this.openFileDistancias = new System.Windows.Forms.OpenFileDialog();
             this.mainTabControl.SuspendLayout();
             this.tabConfiguracion.SuspendLayout();
             this.tabSimple.SuspendLayout();
+            this.tabDetallado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMapaDetallado)).BeginInit();
             this.SuspendLayout();
             // 
             // mainTabControl
             // 
             this.mainTabControl.Controls.Add(this.tabConfiguracion);
             this.mainTabControl.Controls.Add(this.tabSimple);
+            this.mainTabControl.Controls.Add(this.tabDetallado);
             this.mainTabControl.Location = new System.Drawing.Point(12, 12);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
@@ -254,6 +266,92 @@
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // tabDetallado
+            // 
+            this.tabDetallado.Controls.Add(this.picMapaDetallado);
+            this.tabDetallado.Controls.Add(this.textBox1);
+            this.tabDetallado.Controls.Add(this.label1);
+            this.tabDetallado.Controls.Add(this.button1);
+            this.tabDetallado.Controls.Add(this.label2);
+            this.tabDetallado.Controls.Add(this.label3);
+            this.tabDetallado.Controls.Add(this.comboBox1);
+            this.tabDetallado.Controls.Add(this.comboBox2);
+            this.tabDetallado.Location = new System.Drawing.Point(4, 22);
+            this.tabDetallado.Name = "tabDetallado";
+            this.tabDetallado.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDetallado.Size = new System.Drawing.Size(976, 679);
+            this.tabDetallado.TabIndex = 2;
+            this.tabDetallado.Text = "Vista detallada";
+            this.tabDetallado.UseVisualStyleBackColor = true;
+            // 
+            // picMapaDetallado
+            // 
+            this.picMapaDetallado.Location = new System.Drawing.Point(10, 40);
+            this.picMapaDetallado.Name = "picMapaDetallado";
+            this.picMapaDetallado.Size = new System.Drawing.Size(961, 599);
+            this.picMapaDetallado.TabIndex = 23;
+            this.picMapaDetallado.TabStop = false;
+            this.picMapaDetallado.Paint += new System.Windows.Forms.PaintEventHandler(this.picMapaDetallado_Paint);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(546, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(88, 20);
+            this.textBox1.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(439, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Tiempo de trayecto:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(343, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Calcular Ruta";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(658, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Estacion final";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Estacion inicio";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(739, 9);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(231, 21);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(88, 9);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(231, 21);
+            this.comboBox2.TabIndex = 16;
+            // 
             // openFileGrafo
             // 
             this.openFileGrafo.FileName = "openFileDialog1";
@@ -278,6 +376,9 @@
             this.tabConfiguracion.PerformLayout();
             this.tabSimple.ResumeLayout(false);
             this.tabSimple.PerformLayout();
+            this.tabDetallado.ResumeLayout(false);
+            this.tabDetallado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMapaDetallado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,6 +407,15 @@
         private System.Windows.Forms.Button btnCalcularRuta;
         private System.Windows.Forms.TextBox txtTiempo;
         private System.Windows.Forms.Label lblTiempoRuta;
+        private System.Windows.Forms.TabPage tabDetallado;
+        private System.Windows.Forms.PictureBox picMapaDetallado;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 

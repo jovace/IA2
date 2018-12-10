@@ -25,6 +25,8 @@ namespace IA
         Estacion estacionInicio;
         Estacion estacionFinal;
 
+        Bitmap mapaDetallado = new Bitmap(961, 599);
+
         public Main()
         {
             InitializeComponent();
@@ -83,6 +85,13 @@ namespace IA
         private void btnStart_Click(object sender, EventArgs e)
         {
             panel1.Refresh();
+
+            Graphics mapaDetalladoGraphics = Graphics.FromImage(mapaDetallado);
+            foreach (Estacion item in estaciones.Values)
+            {
+                item.dibujar(mapaDetalladoGraphics);
+            }
+            picMapaDetallado.Image = mapaDetallado;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -277,6 +286,11 @@ namespace IA
             }
 
             return menor;
+        }
+
+        private void picMapaDetallado_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 
