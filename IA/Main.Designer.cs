@@ -49,14 +49,15 @@
             this.cbEstacionInicio = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabDetallado = new System.Windows.Forms.TabPage();
+            this.btnDetalleVariables = new System.Windows.Forms.Button();
+            this.btnDetPaso = new System.Windows.Forms.Button();
+            this.txtDetDescripcion = new System.Windows.Forms.TextBox();
             this.picMapaDetallado = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnDetComenzar = new System.Windows.Forms.Button();
+            this.lblDetFinal = new System.Windows.Forms.Label();
+            this.lblDetInicio = new System.Windows.Forms.Label();
+            this.txtDetFinal = new System.Windows.Forms.ComboBox();
+            this.txtDetInicio = new System.Windows.Forms.ComboBox();
             this.openFileGrafo = new System.Windows.Forms.OpenFileDialog();
             this.openFileDistancias = new System.Windows.Forms.OpenFileDialog();
             this.mainTabControl.SuspendLayout();
@@ -268,14 +269,15 @@
             // 
             // tabDetallado
             // 
+            this.tabDetallado.Controls.Add(this.btnDetalleVariables);
+            this.tabDetallado.Controls.Add(this.btnDetPaso);
+            this.tabDetallado.Controls.Add(this.txtDetDescripcion);
             this.tabDetallado.Controls.Add(this.picMapaDetallado);
-            this.tabDetallado.Controls.Add(this.textBox1);
-            this.tabDetallado.Controls.Add(this.label1);
-            this.tabDetallado.Controls.Add(this.button1);
-            this.tabDetallado.Controls.Add(this.label2);
-            this.tabDetallado.Controls.Add(this.label3);
-            this.tabDetallado.Controls.Add(this.comboBox1);
-            this.tabDetallado.Controls.Add(this.comboBox2);
+            this.tabDetallado.Controls.Add(this.btnDetComenzar);
+            this.tabDetallado.Controls.Add(this.lblDetFinal);
+            this.tabDetallado.Controls.Add(this.lblDetInicio);
+            this.tabDetallado.Controls.Add(this.txtDetFinal);
+            this.tabDetallado.Controls.Add(this.txtDetInicio);
             this.tabDetallado.Location = new System.Drawing.Point(4, 22);
             this.tabDetallado.Name = "tabDetallado";
             this.tabDetallado.Padding = new System.Windows.Forms.Padding(3);
@@ -283,6 +285,33 @@
             this.tabDetallado.TabIndex = 2;
             this.tabDetallado.Text = "Vista detallada";
             this.tabDetallado.UseVisualStyleBackColor = true;
+            // 
+            // btnDetalleVariables
+            // 
+            this.btnDetalleVariables.Location = new System.Drawing.Point(438, 7);
+            this.btnDetalleVariables.Name = "btnDetalleVariables";
+            this.btnDetalleVariables.Size = new System.Drawing.Size(121, 23);
+            this.btnDetalleVariables.TabIndex = 26;
+            this.btnDetalleVariables.Text = "Detalle variables";
+            this.btnDetalleVariables.UseVisualStyleBackColor = true;
+            this.btnDetalleVariables.Click += new System.EventHandler(this.btnDetalleVariables_Click);
+            // 
+            // btnDetPaso
+            // 
+            this.btnDetPaso.Location = new System.Drawing.Point(565, 7);
+            this.btnDetPaso.Name = "btnDetPaso";
+            this.btnDetPaso.Size = new System.Drawing.Size(87, 23);
+            this.btnDetPaso.TabIndex = 25;
+            this.btnDetPaso.Text = "Siguiente paso";
+            this.btnDetPaso.UseVisualStyleBackColor = true;
+            this.btnDetPaso.Click += new System.EventHandler(this.btnDetPaso_Click);
+            // 
+            // txtDetDescripcion
+            // 
+            this.txtDetDescripcion.Location = new System.Drawing.Point(10, 645);
+            this.txtDetDescripcion.Name = "txtDetDescripcion";
+            this.txtDetDescripcion.Size = new System.Drawing.Size(960, 20);
+            this.txtDetDescripcion.TabIndex = 24;
             // 
             // picMapaDetallado
             // 
@@ -292,65 +321,53 @@
             this.picMapaDetallado.TabIndex = 23;
             this.picMapaDetallado.TabStop = false;
             this.picMapaDetallado.Paint += new System.Windows.Forms.PaintEventHandler(this.picMapaDetallado_Paint);
+            this.picMapaDetallado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picMapaDetallado_MouseDown);
             // 
-            // textBox1
+            // btnDetComenzar
             // 
-            this.textBox1.Location = new System.Drawing.Point(546, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 20);
-            this.textBox1.TabIndex = 22;
+            this.btnDetComenzar.Location = new System.Drawing.Point(343, 7);
+            this.btnDetComenzar.Name = "btnDetComenzar";
+            this.btnDetComenzar.Size = new System.Drawing.Size(89, 23);
+            this.btnDetComenzar.TabIndex = 20;
+            this.btnDetComenzar.Text = "Comenzar";
+            this.btnDetComenzar.UseVisualStyleBackColor = true;
+            this.btnDetComenzar.Click += new System.EventHandler(this.btnDetComenzar_Click);
             // 
-            // label1
+            // lblDetFinal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(439, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Tiempo de trayecto:";
+            this.lblDetFinal.AutoSize = true;
+            this.lblDetFinal.Location = new System.Drawing.Point(658, 12);
+            this.lblDetFinal.Name = "lblDetFinal";
+            this.lblDetFinal.Size = new System.Drawing.Size(70, 13);
+            this.lblDetFinal.TabIndex = 19;
+            this.lblDetFinal.Text = "Estacion final";
             // 
-            // button1
+            // lblDetInicio
             // 
-            this.button1.Location = new System.Drawing.Point(343, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Calcular Ruta";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblDetInicio.AutoSize = true;
+            this.lblDetInicio.Location = new System.Drawing.Point(7, 12);
+            this.lblDetInicio.Name = "lblDetInicio";
+            this.lblDetInicio.Size = new System.Drawing.Size(75, 13);
+            this.lblDetInicio.TabIndex = 18;
+            this.lblDetInicio.Text = "Estacion inicio";
             // 
-            // label2
+            // txtDetFinal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(658, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Estacion final";
+            this.txtDetFinal.FormattingEnabled = true;
+            this.txtDetFinal.Location = new System.Drawing.Point(739, 9);
+            this.txtDetFinal.Name = "txtDetFinal";
+            this.txtDetFinal.Size = new System.Drawing.Size(231, 21);
+            this.txtDetFinal.TabIndex = 17;
+            this.txtDetFinal.SelectedIndexChanged += new System.EventHandler(this.txtDetFinal_SelectedIndexChanged);
             // 
-            // label3
+            // txtDetInicio
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Estacion inicio";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(739, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(231, 21);
-            this.comboBox1.TabIndex = 17;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(88, 9);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(231, 21);
-            this.comboBox2.TabIndex = 16;
+            this.txtDetInicio.FormattingEnabled = true;
+            this.txtDetInicio.Location = new System.Drawing.Point(88, 9);
+            this.txtDetInicio.Name = "txtDetInicio";
+            this.txtDetInicio.Size = new System.Drawing.Size(231, 21);
+            this.txtDetInicio.TabIndex = 16;
+            this.txtDetInicio.SelectedIndexChanged += new System.EventHandler(this.txtDetInicio_SelectedIndexChanged);
             // 
             // openFileGrafo
             // 
@@ -409,13 +426,14 @@
         private System.Windows.Forms.Label lblTiempoRuta;
         private System.Windows.Forms.TabPage tabDetallado;
         private System.Windows.Forms.PictureBox picMapaDetallado;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnDetComenzar;
+        private System.Windows.Forms.Label lblDetFinal;
+        private System.Windows.Forms.Label lblDetInicio;
+        private System.Windows.Forms.ComboBox txtDetFinal;
+        private System.Windows.Forms.ComboBox txtDetInicio;
+        private System.Windows.Forms.TextBox txtDetDescripcion;
+        private System.Windows.Forms.Button btnDetPaso;
+        private System.Windows.Forms.Button btnDetalleVariables;
     }
 }
 

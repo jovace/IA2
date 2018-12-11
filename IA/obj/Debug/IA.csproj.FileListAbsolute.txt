@@ -7,3 +7,4 @@ C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.csproj.GenerateResource.cache
 C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.csproj.CoreCompileInputs.cache
 C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.exe
 C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.pdb
+C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.DetalleVariables.resources
