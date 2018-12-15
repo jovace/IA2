@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetalleRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleRuta.Designer.cs">
+      <DependentUpon>DetalleRuta.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetalleVariables.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +62,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DetalleRuta.resx">
+      <DependentUpon>DetalleRuta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetalleVariables.resx">
       <DependentUpon>DetalleVariables.cs</DependentUpon>
     </EmbeddedResource>

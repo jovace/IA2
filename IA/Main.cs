@@ -252,7 +252,10 @@ namespace IA
                 actual = menorFScore(fScore, conjuntoAbierto);
                 if (actual.Equals(estacionFinal)) {
                     txtTiempo.Text = Math.Ceiling((gScore[estacionFinal] / VELMEDIA) * 60).ToString();
-                    MessageBox.Show(reconstruirRuta(vieneDe, actual,estacionInicio), "Ruta más corta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show(reconstruirRuta(vieneDe, actual,estacionInicio), "Ruta más corta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DetalleRuta det = new DetalleRuta();
+                    det.setVariables(vieneDe, gScore, estacionInicio, estacionFinal);
+                    det.ShowDialog();
                 }
 
                 conjuntoAbierto.Remove(actual);
@@ -323,6 +326,7 @@ namespace IA
                     clicked = estaciones[estacionesName[i]];
                 }
             }
+            if (!encontrado) return;
 
             switch(e.Button)
             {
@@ -394,7 +398,10 @@ namespace IA
                     if (this.actual.Equals(estacionFinal))
                     {
                         txtTiempo.Text = Math.Ceiling((gScore[estacionFinal] / VELMEDIA) * 60).ToString();
-                        MessageBox.Show(reconstruirRuta(vieneDe, this.actual, estacionInicio), "Ruta más corta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show(reconstruirRuta(vieneDe, this.actual, estacionInicio), "Ruta más corta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DetalleRuta det = new DetalleRuta();
+                        det.setVariables(vieneDe, gScore, estacionInicio, estacionFinal);
+                        det.ShowDialog();
                     }
                     txtDetDescripcion.Text = "Nodo con menor fScore: " + this.actual.getName()+". Avanzamos a ese nodo.";
                     break;

@@ -1,6 +1,5 @@
 C:\Users\rmjuw\source\repos\IA\IA\bin\Debug\IA.exe
 C:\Users\rmjuw\source\repos\IA\IA\bin\Debug\IA.pdb
-C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.csprojResolveAssemblyReference.cache
 C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.Main.resources
 C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.Properties.Resources.resources
 C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.csproj.GenerateResource.cache
@@ -8,3 +7,5 @@ C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.csproj.CoreCompileInputs.cache
 C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.exe
 C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.pdb
 C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.DetalleVariables.resources
+C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.csprojAssemblyReference.cache
+C:\Users\rmjuw\source\repos\IA\IA\obj\Debug\IA.DetalleRuta.resources
